@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Surprise! 🎉</title>
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        img {
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px white;
+            position: relative;
+            z-index: 10;
+        }
+        /* Falling sparkles effect */
+        @keyframes fall {
+            from { transform: translateY(-10px); opacity: 1; }
+            to { transform: translateY(100vh); opacity: 0; }
+        }
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: white;
+            border-radius: 50%;
+            animation: fall 3s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.postimg.cc/gk6K5K84/Picsart-25-02-14-00-44-14-597.png" alt="Celebration Image">
+    
+    <!-- Sparkles effect using JavaScript -->
+    <script>
+        function createSparkle() {
+            const sparkle = document.createElement("div");
+            sparkle.classList.add("sparkle");
+            sparkle.style.left = Math.random() * 100 + "vw";
+            sparkle.style.animationDuration = Math.random() * 3 + 2 + "s"; // Random duration between 2s and 5s
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 5000);
+        }
+        setInterval(createSparkle, 100);
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KV NERIST DARK TALES</title>
+    <title>NERIST DARK TALES</title>
     <style>
         body {
             text-align: center;
@@ -31,20 +31,6 @@
             background-color: lightcoral;
             position: absolute;
         }
-        .message {
-            display: none;
-            font-size: 24px;
-            color: white;
-            background-color: red;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            animation: pop 0.5s ease-in-out;
-        }
-        @keyframes pop {
-            0% { transform: scale(0.5); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
         .footer {
             position: fixed;
             bottom: 10px;
@@ -62,11 +48,8 @@
         <button class="yes" onclick="showMessage()">YES</button>
         <button class="no" onmouseover="moveNo()">NO</button>
     </div>
-    <div class="message" id="message">
-        🎉 The God of GAYS! ❤️
-    </div>
 
-    <p class="footer">Made by Bhuvnesh maam ft Shama maam </p>
+    <p class="footer">Made by Bhuvnesh maam ft shama maam</p>
 
     <script>
         function moveNo() {
@@ -78,7 +61,7 @@
         }
 
         function showMessage() {
-            document.getElementById("message").style.display = "block";
+            window.open("celebration.html", "_blank");
         }
     </script>
 
